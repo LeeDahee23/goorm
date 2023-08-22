@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: "Gothic A1", sans-serif;
+  font-family: 'Gothic A1', sans-serif;
   margin: 0;
 }
 
@@ -46,6 +46,7 @@ button {
   background-color: var(--color-primary);
   background-image: url(/assets/images/bg_theGlory.jpg);
   background-size: cover;
+  z-index: 0;
 }
 
 .header__logo {
@@ -53,7 +54,7 @@ button {
   justify-content: space-between;
 }
 .header__logo__title {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   color: var(--color-accent);
 }
 
@@ -98,6 +99,7 @@ button {
 #originals {
   background-color: var(--color-primary);
   padding: 0 10px;
+  width: 100%;
 }
 .originals__title {
   color: var(--color-text);
@@ -106,8 +108,14 @@ button {
 }
 .originals__movies {
   display: flex;
+  overflow-x: auto;
+  overflow-y: scroll;
   gap: 25px;
   padding-bottom: 100px;
+  scroll-behavior: smooth;
+}
+.originals__movies::-webkit-scrollbar {
+  display: none;
 }
 .movie {
   transition: all 0.2s ease-in-out;
@@ -117,7 +125,8 @@ button {
 }
 .movie:hover {
   transition-delay: 0.3s;
-  transform: scale(1.5) translateX(30%) translateY(-20%);
+  transform: scale(1.2) translateY(10%);
+  z-index: 100;
 }
 .movie:hover .movie__description {
   opacity: 1;
