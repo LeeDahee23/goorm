@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/91a2d12f90.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header id="header">
+      <h1 class="header__title">Todos 앱</h1>
+      <button class="header__add-button">새로운 TODO 추가하기</button>
+    </header>
+    <main id="main">
+      <ul class="todo__list">
+        <li class="todo__item">
+          <input type="checkbox" class="todo__checkbox" />
+          <p class="todo__title">밥 먹기</p>
+          <button class="todo__modify">
+            <i class="fa-solid fa-pen" class="todo__modify__icon"></i>
+          </button>
+          <button class="todo__delete">
+            <i class="fa-solid fa-circle-minus" class="todo__delete__icon"></i>
+          </button>
+        </li>
+      </ul>
+    </main>
+  </body>
+  <!-- JS -->
+  <script src="assets/js/main.js"></script>
+</html>
