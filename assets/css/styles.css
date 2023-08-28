@@ -1,0 +1,96 @@
+:root {
+  /* App Colors */
+  --color-primary: var(--color-pink);
+  --color-primary-accent: var(--color-skyblue);
+  --color-text: var(--color-black);
+  --color-text-variant: var(--color-white);
+  /* Colors */
+  --color-pink: #e88488;
+  --color-skyblue: #b4dbe5;
+  --color-yellow: #f4d160;
+  --color-ivory: #faf3f0;
+  --color-white: #ffffff;
+  --color-black: #000000;
+}
+
+/* Common */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* header */
+#header {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+  background-color: var(--color-primary);
+  color: var(--color-text-variant);
+}
+.header__title {
+  font-size: 30px;
+  font-weight: 900;
+}
+.header__add-button {
+  font-size: 20px;
+  color: var(--color-text-variant);
+  font-weight: 900;
+}
+.header__add-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* main */
+#main {
+  width: 600px;
+  min-height: 600px;
+  background-color: var(--color-primary);
+  padding: 0px 25px;
+}
+.todo__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 35px 30px;
+  background-color: var(--color-primary-accent);
+  border-radius: 15px;
+  gap: 15px;
+}
+.todo__title {
+  width: 1fr;
+  font-size: 25px;
+  font-weight: 900;
+  color: var(--color-text);
+}
+.todo__buttons {
+  position: absolute;
+  right: 30px;
+}
+.todo__modify {
+  margin-right: 15px;
+  font-size: 20px;
+  color: var(--color-primary);
+  filter: brightness(0.75) contrast(200%);
+}
+.todo__delete {
+  font-size: 20px;
+  color: var(--color-primary);
+  filter: brightness(0.75) contrast(200%);
+}
+.todo__modify:hover,
+.todo__delete:hover {
+  cursor: pointer;
+}

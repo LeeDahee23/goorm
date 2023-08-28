@@ -11,6 +11,13 @@
       src="https://kit.fontawesome.com/91a2d12f90.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header id="header">
@@ -22,12 +29,17 @@
         <li class="todo__item">
           <input type="checkbox" class="todo__checkbox" />
           <p class="todo__title">밥 먹기</p>
-          <button class="todo__modify">
-            <i class="fa-solid fa-pen" class="todo__modify__icon"></i>
-          </button>
-          <button class="todo__delete">
-            <i class="fa-solid fa-circle-minus" class="todo__delete__icon"></i>
-          </button>
+          <div class="todo__buttons">
+            <button class="todo__modify">
+              <i class="fa-solid fa-pen" class="todo__modify__icon"></i>
+            </button>
+            <button class="todo__delete">
+              <i
+                class="fa-solid fa-circle-minus"
+                class="todo__delete__icon"
+              ></i>
+            </button>
+          </div>
         </li>
       </ul>
     </main>
