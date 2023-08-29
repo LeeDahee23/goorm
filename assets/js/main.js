@@ -23,11 +23,6 @@ function check_todo(e) {
   todo_content.classList.toggle('complete');
 }
 
-function isChecked(e) {
-  if (e.target.checked) {
-    return true;
-  } else return false;
-}
 // edit
 
 function paint_item(new_content) {
