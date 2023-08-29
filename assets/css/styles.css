@@ -1,6 +1,6 @@
 :root {
   /* App Colors */
-  --color-primary: var(--color-pink);
+  --color-primary: var(--color-yellow);
   --color-primary-accent: var(--color-skyblue);
   --color-text: var(--color-black);
   --color-text-variant: var(--color-white);
@@ -11,6 +11,7 @@
   --color-ivory: #faf3f0;
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-gray: #7a7a7a;
 }
 
 /* Common */
@@ -29,33 +30,49 @@ button {
 ul {
   list-style: none;
 }
+body {
+  width: 500px;
+}
 
 /* header */
 #header {
-  width: 600px;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 25px;
+  width: 100%;
+  padding: 30px 25px;
   background-color: var(--color-primary);
-  color: var(--color-text-variant);
+  color: var(--color-text);
 }
 .header__title {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 900;
+  margin-bottom: 20px;
 }
-.header__add-button {
-  font-size: 20px;
-  color: var(--color-text-variant);
-  font-weight: 900;
+.header__add-form {
+  display: flex;
+  width: 100%;
+  background-color: var(--color-white);
+  border-radius: 10px;
 }
-.header__add-button:hover {
-  text-decoration: underline;
-  cursor: pointer;
+.add__title {
+  width: 100%;
+  padding: 5px;
+  margin: 0 10px;
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.add__button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--color-primary-accent);
+  color: var(--color-text);
 }
 
 /* main */
 #main {
-  width: 600px;
+  width: 100%;
   min-height: 600px;
   background-color: var(--color-primary);
   padding: 0px 25px;
@@ -64,33 +81,39 @@ ul {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 35px 30px;
-  background-color: var(--color-primary-accent);
-  border-radius: 15px;
+  padding: 0px 20px;
+  margin-bottom: 10px;
   gap: 15px;
 }
+.todo__checkbox {
+  width: 20px;
+  height: 20px;
+}
 .todo__title {
-  width: 1fr;
-  font-size: 25px;
-  font-weight: 900;
+  width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 19px;
   color: var(--color-text);
 }
 .todo__buttons {
   position: absolute;
   right: 30px;
 }
-.todo__modify {
+.todo__edit {
   margin-right: 15px;
-  font-size: 20px;
-  color: var(--color-primary);
-  filter: brightness(0.75) contrast(200%);
+  font-size: 16px;
+  color: var(--color-text);
 }
 .todo__delete {
-  font-size: 20px;
-  color: var(--color-primary);
-  filter: brightness(0.75) contrast(200%);
+  font-size: 16px;
+  color: var(--color-text);
 }
-.todo__modify:hover,
+.todo__edit:hover,
 .todo__delete:hover {
   cursor: pointer;
+}
+.complete {
+  text-decoration: line-through;
+  color: var(--color-gray);
 }

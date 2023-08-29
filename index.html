@@ -21,27 +21,14 @@
   </head>
   <body>
     <header id="header">
-      <h1 class="header__title">Todos 앱</h1>
-      <button class="header__add-button">새로운 TODO 추가하기</button>
+      <h1 class="header__title">Todo</h1>
+      <form action="" class="header__add-form">
+        <input type="text" class="add__title" />
+        <input type="submit" class="add__button" value="추가" />
+      </form>
     </header>
     <main id="main">
-      <ul class="todo__list">
-        <li class="todo__item">
-          <input type="checkbox" class="todo__checkbox" />
-          <p class="todo__title">밥 먹기</p>
-          <div class="todo__buttons">
-            <button class="todo__modify">
-              <i class="fa-solid fa-pen" class="todo__modify__icon"></i>
-            </button>
-            <button class="todo__delete">
-              <i
-                class="fa-solid fa-circle-minus"
-                class="todo__delete__icon"
-              ></i>
-            </button>
-          </div>
-        </li>
-      </ul>
+      <ul class="todo__list"></ul>
     </main>
   </body>
   <!-- JS -->
