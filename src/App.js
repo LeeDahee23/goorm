@@ -1,24 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './component/Navbar';
+import { Routes, Route } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import Products from './component/products';
+import Product from './component/Product';
+import Cart from './component/Cart';
+import Checkout from './component/Checkout';
+import Login from './component/Login';
+import { database } from './firebase.config';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(database.currentUser);
+
+  useEffect(() => {
+    database.onAuthStateChanged((user) => {
+      if (user) {
+        setIsLoggedIn(true);
+      } else {
+        setIsLoggedIn(false);
+      }
+    });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route exact path="/products" element={<Products />} />
+        <Route exact path="/products/:id" element={<Product />} />
+        <Route exact path="/cart" element={<Cart />} />
+        <Route exact path="/checkout" element={<Checkout />} />
+        <Route exact path="/" element={<Login />} />
+      </Routes>
+    </>
   );
 }
 
