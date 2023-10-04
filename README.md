@@ -1,27 +1,13 @@
-# React + TypeScript + Vite
+# 리액트를 이용해서 노트 앱 만들기
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![react note app](https://github.com/LeeDahee23/react-note-app/assets/82389864/1911e152-d414-4712-acf0-bf70e5b155e0)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 기능
+1. 노트 생성하기
+   - 태그 추가하기
+   - 배경색 설정
+   - 우선순위 설정
+2. Pin
+   - 📌 아이콘을 눌러 pin 할 수 있음. 최상단에 고정됨
+3. 태그 별로 노트를 모아 볼 수 있음
+4. 태그를 추가하고 삭제할 수 있음
