@@ -1,0 +1,119 @@
+:root {
+  /* App Colors */
+  --color-primary: var(--color-yellow);
+  --color-primary-accent: var(--color-skyblue);
+  --color-text: var(--color-black);
+  --color-text-variant: var(--color-white);
+  /* Colors */
+  --color-pink: #e88488;
+  --color-skyblue: #b4dbe5;
+  --color-yellow: #f4d160;
+  --color-ivory: #faf3f0;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray: #7a7a7a;
+}
+
+/* Common */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+body {
+  width: 500px;
+}
+
+/* header */
+#header {
+  width: 100%;
+  padding: 30px 25px;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+.header__title {
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.header__add-form {
+  display: flex;
+  width: 100%;
+  background-color: var(--color-white);
+  border-radius: 10px;
+}
+.add__title {
+  width: 100%;
+  padding: 5px;
+  margin: 0 10px;
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.add__button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--color-primary-accent);
+  color: var(--color-text);
+}
+
+/* main */
+#main {
+  width: 100%;
+  min-height: 600px;
+  background-color: var(--color-primary);
+  padding: 0px 25px;
+}
+.todo__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  margin-bottom: 10px;
+  gap: 15px;
+}
+.todo__checkbox {
+  width: 20px;
+  height: 20px;
+}
+.todo__title {
+  width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 19px;
+  color: var(--color-text);
+}
+.todo__buttons {
+  position: absolute;
+  right: 30px;
+}
+.todo__edit {
+  margin-right: 15px;
+  font-size: 16px;
+  color: var(--color-text);
+}
+.todo__delete {
+  font-size: 16px;
+  color: var(--color-text);
+}
+.todo__edit:hover,
+.todo__delete:hover {
+  cursor: pointer;
+}
+.complete {
+  text-decoration: line-through;
+  color: var(--color-gray);
+}
