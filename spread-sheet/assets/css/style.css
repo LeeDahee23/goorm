@@ -1,0 +1,47 @@
+:root {
+  /* App Colors */
+  --color-primary: var(--color-white);
+  --color-primary-variant: var(--color-lightgray);
+  --color-accent: var(--color-green);
+  --color-accent-variant: var(--color-lightblue);
+  --color-text: var(--color-black);
+  --color-text-accent: var(--color-white);
+
+  /* Colors */
+  --color-white: #fff;
+  --color-lightgray: #d4d4d4;
+  --color-green: #01b94b;
+  --color-lightblue: #afe1f4;
+}
+
+#export-btn {
+  background-color: var(--color-accent);
+  color: var(--color-text-accent);
+  border: none;
+  padding: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.cell-row {
+  display: flex;
+}
+
+.cell {
+  width: 80px;
+  border: 1px solid var(--color-primary-variant);
+  height: 40px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.cell.header {
+  text-align: center;
+  background: #ddd;
+}
+
+.cell.header.active {
+  background: var(--color-accent-variant);
+  color: var(--color-text-accent);
+}
